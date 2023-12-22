@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 
 namespace ConsoleApplication1
 {
@@ -6,7 +6,7 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hallo World in C#");
+            System.Console.WriteLine("Hallo World in C#");
         }
     }
 }
