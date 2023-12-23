@@ -2,6 +2,7 @@
 
 
 using System;
+using System.Diagnostics;
 
 namespace ConsoleApplication1
 {
@@ -58,7 +59,11 @@ namespace ConsoleApplication1
             String enteredName = Console.ReadLine();
             Console.WriteLine(" ");
             Console.WriteLine("Hello " + enteredName + " how are you?");
-
+            Console.WriteLine("");
+            Console.WriteLine("Tell me your age: ");
+            Console.WriteLine("");
+            String age = Console.ReadLine();
+            Console.WriteLine("Your age is: " + age);
         }
     }
 }
