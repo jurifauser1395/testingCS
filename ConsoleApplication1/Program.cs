@@ -20,7 +20,7 @@ namespace ConsoleApplication1
             
             // Primitive data types
             int i = 3455;
-            double i01 = 3453.443543;
+            double i01 = 3453.443543D;
             char x = 'y';
             string name = "j.f.";
             bool y = true;
@@ -28,6 +28,9 @@ namespace ConsoleApplication1
             // Printout vars
             Console.WriteLine("All primitive data types in c#: integer: " + i + ", double: " + i01 + ", char: " + x + ", string: " + name + ", bool: " + y);
             
+            // Constants can't be overriden 
+            /* Const int myNum = 15;
+             myNum = 20; is will return an error*/
 
         }
     }
