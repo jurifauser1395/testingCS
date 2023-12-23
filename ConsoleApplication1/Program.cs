@@ -1,10 +1,9 @@
 ﻿
 
-using System;
 
 namespace ConsoleApplication1
 {
-    internal class Program
+    internal abstract class Program
     {
         public static void Main(string[] args)
         {
@@ -20,17 +19,37 @@ namespace ConsoleApplication1
             
             // Primitive data types
             int i = 3455;
+            int ii = 3;
+            i = i + ii;
+            long iii = 3400000000000000000;
+            float l = 3.454343F;
             double i01 = 3453.443543D;
             char x = 'y';
             string name = "j.f.";
-            bool y = true;
+            bool y;
+            
+            if (i == 3455) 
+            {
+                y = false;
+            }
+            else
+            {
+                y = true;
+            }
             
             // Printout vars
-            Console.WriteLine("All primitive data types in c#: integer: " + i + ", double: " + i01 + ", char: " + x + ", string: " + name + ", bool: " + y);
+            System.Console.WriteLine("All primitive data types in c#: integer: " + i + ", float: " + l + ", double: " + i01 + ", char: " + x + ", string: " + name + ", bool: " + y);
             
             // Constants can't be overriden 
             /* Const int myNum = 15;
              myNum = 20; is will return an error*/
+            
+            // Declare more then one variable of the same time
+            int z = 4, g = 3, a = 6;
+            System.Console.WriteLine(z + g + a);
+            
+            // Methods for type conversion
+            System.Console.WriteLine(System.Convert.ToString(y));
 
         }
     }
