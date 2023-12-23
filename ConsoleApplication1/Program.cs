@@ -1,6 +1,8 @@
 ﻿
 
 
+using System;
+
 namespace ConsoleApplication1
 {
     internal abstract class Program
@@ -8,9 +10,9 @@ namespace ConsoleApplication1
         public static void Main(string[] args)
         {
             
-            System.Console.WriteLine("Hallo World in C#");
-            System.Console.WriteLine("Math: " + 3 + 4);
-            System.Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
+            Console.WriteLine("Hallo World in C#");
+            Console.WriteLine("Math: " + 3 + 4);
+            Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
             
             // Commenting works as usual
             /*System.Console.WriteLine("Hallo World in C#");
@@ -38,7 +40,7 @@ namespace ConsoleApplication1
             }
             
             // Printout vars
-            System.Console.WriteLine("All primitive data types in c#: integer: " + i + ", float: " + l + ", double: " + i01 + ", char: " + x + ", string: " + name + ", bool: " + y);
+            Console.WriteLine("All primitive data types in c#: integer: " + i + ", float: " + l + ", double: " + i01 + ", char: " + x + ", string: " + name + ", bool: " + y);
             
             // Constants can't be overriden 
             /* Const int myNum = 15;
@@ -46,10 +48,16 @@ namespace ConsoleApplication1
             
             // Declare more then one variable of the same time
             int z = 4, g = 3, a = 6;
-            System.Console.WriteLine(z + g + a);
+            Console.WriteLine(z + g + a);
             
             // Methods for type conversion
-            System.Console.WriteLine(System.Convert.ToString(y));
+            Console.WriteLine(Convert.ToString(y));
+
+            // Try the ReadLine() method
+            Console.WriteLine("Enter your name:");
+            String enteredName = Console.ReadLine();
+            Console.WriteLine(" ");
+            Console.WriteLine("Hello " + enteredName + " how are you?");
 
         }
     }
