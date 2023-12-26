@@ -106,6 +106,7 @@ namespace ConsoleApplication1
             String name = $"The name is: {fName} {lName}";
             int secondName = name.IndexOf("D");
             Console.WriteLine("The second Name is: " + name.Substring(secondName) + "\nAnd your first name is: " + fName);
+            // Nothing has changed 
 
 
 
