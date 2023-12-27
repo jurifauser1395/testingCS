@@ -65,7 +65,7 @@ namespace ConsoleApplication1
             Console.WriteLine("Your age is: " + age);            
             
             // Trying modulo operation 
-            Console.WriteLine("Enter a number between 0 - 100000: ");
+            Console.WriteLine("\nEnter a number between 0 - 100000: ");
             Console.WriteLine("");
             
             int enteredNumber = Convert.ToInt32(Console.ReadLine());
@@ -83,30 +83,50 @@ namespace ConsoleApplication1
             }
                         
             // Play with the Math Class
-            Console.WriteLine("To figure out which number is bigger enter two numbers below.");
+            Console.WriteLine("\nTo figure out which number is bigger enter two numbers below.");
             
             double num01 = Convert.ToDouble(Console.ReadLine());
             double num02 = Convert.ToDouble(Console.ReadLine());
 
-            double num03 = Math.Max(num01, num02);
-            double num04 = Math.Min(num01, num02);
-            Console.WriteLine(num03 + " is bigger than " + num04);
-            
+            if (!(num01 == num02))
+            {
+                double num03 = Math.Max(num01, num02);
+                double num04 = Math.Min(num01, num02);
+                Console.WriteLine(num03 + " is bigger than " + num04);
+            }
+
             // Try out the .Length sting methode
-            Console.WriteLine("To figure out the length of a work enter it below");
+            Console.WriteLine("\nTo figure out the length of a text enter it below");
             Console.WriteLine(" ");
             String enteredText = Console.ReadLine();
             Console.WriteLine(" ");
-            Console.WriteLine("Your entered text has " + enteredText.Length + " letters");
-            Console.WriteLine("Your text will be displayed in upper case here: " + enteredText.ToUpper());
+            Console.WriteLine("Your entered text has " + enteredText.Length + " characters");
+            Console.WriteLine("Your text will be displayed in upper case here: " + enteredText.ToUpper() + "\n");
             
             // String interpolation
             String fName = "John";
             String lName = "Doe";
             String name = $"The name is: {fName} {lName}";
             int secondName = name.IndexOf("D");
-            Console.WriteLine("The second Name is: " + name.Substring(secondName) + "\nAnd your first name is: " + fName);
-            // Nothing has changed 
+            Console.WriteLine("The second Name is: " + name.Substring(secondName) + "\nAnd your first name is: " + fName + "\n");
+            
+            // Ternary Operator (shorthand if...Else)
+            float length = 5.5F;
+
+            if (length >= 5)
+            {
+                Console.WriteLine("Good!");
+            }
+            else
+            {
+                Console.WriteLine("Bad!");
+            }
+            
+            // shorthand
+            String statement = (length >= 5) ? "\nGood!" : "\nBad!";
+            Console.WriteLine(statement);
+
+
 
 
 
