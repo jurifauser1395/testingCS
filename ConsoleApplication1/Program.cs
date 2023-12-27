@@ -125,7 +125,25 @@ namespace ConsoleApplication1
             // shorthand
             String statement = (length >= 5) ? "\nGood!" : "\nBad!";
             Console.WriteLine(statement);
+            
+            // switch operator
+            int letterLength = enteredText.Length;
 
+            switch (letterLength)
+            {
+                case 1:
+                    Console.WriteLine("One letter");
+                    break;
+                case 2:
+                    Console.WriteLine("Two letters");
+                    break;
+                case 3:
+                    Console.WriteLine("Three letters");
+                    break;
+                default:
+                    Console.WriteLine("More then three letters");
+                    break;
+            }
 
 
 
