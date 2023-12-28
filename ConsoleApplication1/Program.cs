@@ -2,7 +2,7 @@
 
 
 using System;
-using System.Diagnostics;
+
 
 namespace ConsoleApplication1
 {
@@ -10,14 +10,15 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Hallo World in C#");
             Console.WriteLine("Math: " + 3 + 4);
             Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
             
             // Commenting works as usual
-            System.Console.WriteLine("Hallo World in C#");
-            System.Console.WriteLine("Math: " + 3 + 4);
-            System.Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
+            Console.WriteLine("Hallo World in C#");
+            Console.WriteLine("Math: " + 3 + 4);
+            Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
             
             // Primitive data types
             int i = 3455;
@@ -44,7 +45,7 @@ namespace ConsoleApplication1
             
             // Constants can't be overriden 
             /*Const int myNum = 15;
-            myNum = 20; is will return an error*/
+            myNum = 20; is will return an error
             
             // Declare more then one variable of the same time
             int z = 4, g = 3, a = 6;
@@ -156,9 +157,31 @@ namespace ConsoleApplication1
             
             do
             {
-                Console.WriteLine("\nThere are " + letterLength + " characters");
+                Console.WriteLine("\nThere are " + letterLength + " characters\n");
                 letterLength++;
-            } while (letterLength < 30);
+            } 
+            while (letterLength < 30);
+            */
+            
+            // Nested for loops
+            for (int ixyz = 0; ixyz <= 10; ixyz++)
+            {
+                Console.WriteLine("\nThis is the " + ixyz + "th. loop:");
+                
+                for (int xyz = 0; xyz <= 10; xyz++)
+                {
+                    Console.WriteLine("This is the inner loop " + xyz);
+                }
+            }
+            
+            // Foreach Loop
+            string[] vegetables = { "carrot", "tomato", "potato", "carrot" };
+
+            foreach (string vegetCarr in vegetables)
+            {
+                Console.WriteLine("\n" + vegetCarr);
+            }
+            
         }
     }
 }
