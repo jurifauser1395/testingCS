@@ -144,10 +144,21 @@ namespace ConsoleApplication1
                     Console.WriteLine("More then three letters");
                     break;
             }
+            
+            // Testing out while loops
+            while (letterLength < 10)
+            {
+                Console.WriteLine("There are " + letterLength + " characters\n");
+                letterLength++;
+            }
 
-
-
-
+            letterLength = 0;
+            
+            do
+            {
+                Console.WriteLine("\nThere are " + letterLength + " characters");
+                letterLength++;
+            } while (letterLength < 30);
         }
     }
 }
