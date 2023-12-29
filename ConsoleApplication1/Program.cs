@@ -209,6 +209,23 @@ namespace ConsoleApplication1
             Console.WriteLine("Sorted array in a row: " + sortedStringInARow);
             int largestValue = myNumbers01.Max();
             Console.WriteLine("Largest value in this array is : " + largestValue);
+            
+            // Looping through 2D arrays
+            int[,] num = { { 3, 53, 3, 6 }, { 6, 3, 5, 7 } };
+            for (int i = 0; i < num.GetLength(0); i++)
+            {
+                for (int j = 0; j < num.GetLength(1); j++)
+                {
+                    if (i == 0)
+                    {
+                        Console.WriteLine("\nTuple number " + j + " : (" + num[i, j] + ", " + num[1, j] + ")");
+                    }
+                    else
+                        break;
+                }
+                break;
+            }
+
         }
     }
 }
