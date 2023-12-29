@@ -2,6 +2,7 @@
 
 
 using System;
+using System.Linq;
 
 
 namespace ConsoleApplication1
@@ -10,7 +11,7 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            
+            /*
             Console.WriteLine("Hallo World in C#");
             Console.WriteLine("Math: " + 3 + 4);
             Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
@@ -45,7 +46,7 @@ namespace ConsoleApplication1
             
             // Constants can't be overriden 
             /*Const int myNum = 15;
-            myNum = 20; is will return an error*/
+            myNum = 20; is will return an error
             
             // Declare more then one variable of the same time
             int z = 4, g = 3, a = 6;
@@ -185,7 +186,29 @@ namespace ConsoleApplication1
             Console.WriteLine(myNumbers[3]);
             myNumbers[3] = 4934560;
             Console.WriteLine(myNumbers[3]);
+
+            for (int ix = 0; ix < vegetables.Length; ix++)
+            {
+                Console.WriteLine("\nI like this vegetable: " + vegetables[ix]);
+            }
+            */
+            // Sorting arrays
+            int[] myNumbers01 = { 3, 5, 35, 345, 34, 2, 1, 75, 75, 425, 7, 0, 4 };
+            for (int ixy = 0; ixy < myNumbers01.Length; ixy++)
+            {
+                Console.WriteLine("\nUnsorted array: " + myNumbers01[ixy]);
+            }
+            Array.Sort(myNumbers01);
+            for (int ixy = 0; ixy < myNumbers01.Length; ixy++)
+            {
+                Console.WriteLine("\nNow the sorted array: " + myNumbers01[ixy]);
+            }
+
             
+            String sortedStringInARow = string.Join(" ", myNumbers01);
+            Console.WriteLine("Sorted array in a row: " + sortedStringInARow);
+            int largestValue = myNumbers01.Max();
+            Console.WriteLine("Largest value in this array is : " + largestValue);
         }
     }
 }
