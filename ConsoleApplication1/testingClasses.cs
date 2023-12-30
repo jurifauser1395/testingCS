@@ -4,6 +4,7 @@ namespace ConsoleApplication1
 {
     class Program01
     {
+        // Methods
         static int AddingTwoNumbers(int a, int b)
         {
             return a + b;
@@ -13,11 +14,17 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("\nMy second child's name is: " + child2);
         }
-        
+        // Overload method 
+        static double AddingTwoNumbers(double a, double b)
+        {
+            return a + b;
+        }
         static void Main(String[] args)
         {
-            int methodOutput = AddingTwoNumbers(4, 8);
-            Console.WriteLine("This is the output of the AddingTwoNumbers method: " + methodOutput);
+            int methodOutputInt = AddingTwoNumbers(4, 8);
+            double methodOutputDoub = AddingTwoNumbers(4.4, 8.8);
+            Console.WriteLine("This is the output of the AddingTwoNumbersInt method: " + methodOutputInt);
+            Console.WriteLine("This is the output of the AddingTwoNumbersDoub method: " + methodOutputDoub);
             ChildNames(child2: "Jens", child1: "Jan", child3: "Jessica", child4: "Jasmin");
         }
     }
