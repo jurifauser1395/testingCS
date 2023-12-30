@@ -1,6 +1,6 @@
 ﻿
 
-
+/*
 using System;
 using System.Linq;
 
@@ -11,7 +11,7 @@ namespace ConsoleApplication1
     {
         public static void Main(string[] args)
         {
-            /*
+            
             Console.WriteLine("Hallo World in C#");
             Console.WriteLine("Math: " + 3 + 4);
             Console.WriteLine("Math: " + (3 + 4) + " only works within parentheses");
@@ -191,7 +191,7 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("\nI like this vegetable: " + vegetables[ix]);
             }
-            */
+            
             // Sorting arrays
             int[] myNumbers01 = { 3, 5, 35, 345, 34, 2, 1, 75, 75, 425, 7, 0, 4 };
             for (int ixy = 0; ixy < myNumbers01.Length; ixy++)
@@ -212,13 +212,13 @@ namespace ConsoleApplication1
             
             // Looping through 2D arrays
             int[,] num = { { 3, 53, 3, 6 }, { 6, 3, 5, 7 } };
-            for (int i = 0; i < num.GetLength(0); i++)
+            for (int ib = 0; ib < num.GetLength(0); ib++)
             {
                 for (int j = 0; j < num.GetLength(1); j++)
                 {
-                    if (i == 0)
+                    if (ib == 0)
                     {
-                        Console.WriteLine("\nTuple number " + j + " : (" + num[i, j] + ", " + num[1, j] + ")");
+                        Console.WriteLine("\nTuple number " + j + " : (" + num[ib, j] + ", " + num[1, j] + ")");
                     }
                     else
                         break;
@@ -228,4 +228,4 @@ namespace ConsoleApplication1
 
         }
     }
-}
+}*/
