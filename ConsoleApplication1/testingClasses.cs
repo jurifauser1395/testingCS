@@ -1,5 +1,7 @@
 using System;
 
+
+
 namespace ConsoleApplication1
 {
     class Program01
@@ -19,6 +21,7 @@ namespace ConsoleApplication1
         {
             return a + b;
         }
+   
         static void Main(String[] args)
         {
             int methodOutputInt = AddingTwoNumbers(4, 8);
@@ -26,6 +29,11 @@ namespace ConsoleApplication1
             Console.WriteLine("This is the output of the AddingTwoNumbersInt method: " + methodOutputInt);
             Console.WriteLine("This is the output of the AddingTwoNumbersDoub method: " + methodOutputDoub);
             ChildNames(child2: "Jens", child1: "Jan", child3: "Jessica", child4: "Jasmin");
+
+            Wife julia = new Wife(25, "fit", 45, 1);
+            julia.BodyType = "pregnant";
+            Console.WriteLine("\nMy wife is " + julia.BodyType);
         }
+        
     }
 }
