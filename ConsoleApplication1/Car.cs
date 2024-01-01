@@ -4,9 +4,9 @@ namespace ConsoleApplication1
 {
     public class Car
     {
-        public String Color;
-        public String Form;
-        public int HP;
+        private String Color = "red";
+        private String Form;
+        private int HP;
 
 
         public string Color1

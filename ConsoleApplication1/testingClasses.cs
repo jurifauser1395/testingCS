@@ -34,6 +34,10 @@ namespace ConsoleApplication1
             julia.BodyType = "pregnant";
             Console.WriteLine("\nMy wife is " + julia.BodyType);
             
+            // Testing get and set properties 
+            Car tesla = new Car();
+            Console.WriteLine(tesla.Color1);
+            
         }
         
     }
