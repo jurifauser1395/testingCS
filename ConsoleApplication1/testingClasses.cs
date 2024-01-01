@@ -33,6 +33,7 @@ namespace ConsoleApplication1
             Wife julia = new Wife(25, "fit", 45, 1);
             julia.BodyType = "pregnant";
             Console.WriteLine("\nMy wife is " + julia.BodyType);
+            
         }
         
     }
