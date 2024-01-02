@@ -4,27 +4,27 @@ namespace ConsoleApplication1
 {
     public class Car
     {
-        private String Color = "red";
-        private String Form;
-        private int HP;
+        public string Color = "red";
 
+        public string Form { get; set; }
 
-        public string Color1
-        {
-            get => Color;
-            set => Color = value;
-        }
-
-        public string Form1
-        {
-            get => Form;
-            set => Form = value;
-        }
-
+        private int _hp;
+        
         public int Hp
         {
-            get => HP;
-            set => HP = value;
+
+            get => _hp;
+            set
+            {
+                if (value is > 0 and < 1100)
+                {
+                    _hp = value;
+                }
+                else
+                {
+                    Console.WriteLine("\nThere is no such Tesla");
+                }
+            }
         }
     }
 }

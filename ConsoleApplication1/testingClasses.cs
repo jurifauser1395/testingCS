@@ -4,40 +4,49 @@ using System;
 
 namespace ConsoleApplication1
 {
-    class Program01
+    internal static class Program01
     {
         // Methods
-        static int AddingTwoNumbers(int a, int b)
+        private static int AddingTwoNumbers(int a, int b)
         {
             return a + b;
         }
 
-        static void ChildNames(String child1, String child2, String child3, String child4)
+        private static void ChildNames(string child1, string child2, string child3, string child4)
         {
-            Console.WriteLine("\nMy second child's name is: " + child2);
+            Console.WriteLine("\nMy second child's name is: " + child2 + child1 + child3 + child4);
         }
         // Overload method 
-        static double AddingTwoNumbers(double a, double b)
+        private static double AddingTwoNumbers(double a, double b)
         {
             return a + b;
         }
-   
-        static void Main(String[] args)
+
+        private static void Main()
         {
-            int methodOutputInt = AddingTwoNumbers(4, 8);
-            double methodOutputDoub = AddingTwoNumbers(4.4, 8.8);
+            var methodOutputInt = AddingTwoNumbers(4, 8);
+            var methodOutputDouble = AddingTwoNumbers(4.4, 8.8);
             Console.WriteLine("This is the output of the AddingTwoNumbersInt method: " + methodOutputInt);
-            Console.WriteLine("This is the output of the AddingTwoNumbersDoub method: " + methodOutputDoub);
+            Console.WriteLine("This is the output of the AddingTwoNumbersDouble method: " + methodOutputDouble);
             ChildNames(child2: "Jens", child1: "Jan", child3: "Jessica", child4: "Jasmin");
 
-            Wife julia = new Wife(25, "fit", 45, 1);
-            julia.BodyType = "pregnant";
-            Console.WriteLine("\nMy wife is " + julia.BodyType);
+            var julia = new Wife(25, "fit", 45, 1)
+            {
+                BodyType = "fit"
+            };
+            Console.WriteLine("\nMy wife is " + julia.BodyType + "\n");
             
-            // Testing get and set properties 
-            Car tesla = new Car();
-            Console.WriteLine(tesla.Color1);
+            // Testing get and set properties, get, set and object initializers 
+            var tesla = new Car
+            {
+                Color = "white",
+                Hp = 1,
+                Form = "slick"
+            };
             
+            Console.WriteLine(tesla.Color);
+            var horsePower = tesla.Hp = 0;
+            Console.WriteLine(horsePower);
         }
         
     }
