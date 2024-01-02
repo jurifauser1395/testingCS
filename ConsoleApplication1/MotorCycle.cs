@@ -1,4 +1,4 @@
-namespace ConsoleApplication1.Properties
+namespace ConsoleApplication1
 {
     public class MotorCycle : Vehicle
 

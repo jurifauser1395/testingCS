@@ -1,4 +1,4 @@
-using ConsoleApplication1.Properties;
+using ConsoleApplication1;
 
 namespace ConsoleApplication1
 {
