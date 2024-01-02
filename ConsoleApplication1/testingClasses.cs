@@ -1,5 +1,5 @@
 using System;
-
+using ConsoleApplication1.Properties;
 
 
 namespace ConsoleApplication1
@@ -46,7 +46,15 @@ namespace ConsoleApplication1
             };
             var horsePower = dailyCar.Hp = 700;
             Console.WriteLine("MY daily Car is a " + dailyCar.Brand + ", it has a " + dailyCar.Form + " form, " + horsePower + "hp and a nice " + dailyCar.Color + " color!");
+            
+            // Polymorphism 
+            Vehicle lada = new Vehicle();
+            Vehicle vw = new Car();
+            Vehicle honda = new MotorCycle();
+
+            lada.Honk();
+            vw.Honk();
+            honda.Honk();
         }
-        
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using ConsoleApplication1.Properties;
 
 namespace ConsoleApplication1
@@ -24,9 +23,14 @@ namespace ConsoleApplication1
                 }
                 else
                 {
-                    Console.WriteLine("\nThere is no such Tesla");
+                    System.Console.WriteLine("\nThere is no such Tesla");
                 }
             }
+        }
+
+        public override void Honk()
+        {
+            System.Console.WriteLine("\npeeeep, peeeep!");
         }
     }
 }
