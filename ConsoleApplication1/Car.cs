@@ -1,10 +1,12 @@
 using System;
+using ConsoleApplication1.Properties;
 
 namespace ConsoleApplication1
 {
-    public class Car
+    // Car class derived from Vehicle class
+    public class Car : Vehicle
     {
-        public string Color = "red";
+        public string Color;
 
         public string Form { get; set; }
 

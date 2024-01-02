@@ -37,16 +37,15 @@ namespace ConsoleApplication1
             Console.WriteLine("\nMy wife is " + julia.BodyType + "\n");
             
             // Testing get and set properties, get, set and object initializers 
-            var tesla = new Car
+            var dailyCar = new Car
             {
                 Color = "white",
                 Hp = 1,
-                Form = "slick"
+                Form = "slick",
+                Brand = "Tesla"
             };
-            
-            Console.WriteLine(tesla.Color);
-            var horsePower = tesla.Hp = 0;
-            Console.WriteLine(horsePower);
+            var horsePower = dailyCar.Hp = 700;
+            Console.WriteLine("MY daily Car is a " + dailyCar.Brand + ", it has a " + dailyCar.Form + " form, " + horsePower + "hp and a nice " + dailyCar.Color + " color!");
         }
         
     }
