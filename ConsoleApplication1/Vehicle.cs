@@ -1,13 +1,16 @@
 namespace ConsoleApplication1
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
         public string Brand { get; set; }
-        protected int Wheels;
-
-        public virtual void Honk()
+        protected int Wheels { get; }
+        
+        // Constructor 
+        protected Vehicle(int wheels)
         {
-            System.Console.WriteLine("\nbeep, beep!");
+            Wheels = wheels;
         }
+        // Abstract methode
+        public abstract void Honk();
     }
 }

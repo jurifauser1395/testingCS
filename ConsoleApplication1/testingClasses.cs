@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.InteropServices;
+
 namespace ConsoleApplication1
 {
     internal static class Program01
@@ -34,24 +36,19 @@ namespace ConsoleApplication1
             Console.WriteLine("\nMy wife is " + julia.BodyType + "\n");
             
             // Testing get and set properties, get, set and object initializers 
-            var dailyCar = new Car
+            var dailyCar = new Car(4,"white", "slick", 850)
             {
-                Color = "white",
-                Hp = 1,
-                Form = "slick",
                 Brand = "Tesla"
             };
-            var horsePower = dailyCar.Hp = 700;
-            Console.WriteLine("MY daily Car is a " + dailyCar.Brand + ", it has a " + dailyCar.Form + " form, " + horsePower + "hp and a nice " + dailyCar.Color + " color!");
+            Console.WriteLine("MY daily Car is a " + dailyCar.Brand + ", it has a " + dailyCar.Form + " form, " + dailyCar.Hp + "hp and a nice " + dailyCar.Color + " color!");
+            var teslaWheels = dailyCar.GetNumberOfWheelsCar();
+            Console.WriteLine(teslaWheels);
             
-            // Polymorphism 
-            Vehicle lada = new Vehicle();
-            Vehicle vw = new Car();
-            Vehicle honda = new MotorCycle();
-
-            lada.Honk();
-            vw.Honk();
-            honda.Honk();
+            // Polymorphism and abstraction
+            var honda = new MotorCycle(2);
+            honda.GetNumberOfWheelsMCycle();
+            
+         
         }
     }
 }
