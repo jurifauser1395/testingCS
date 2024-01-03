@@ -45,9 +45,13 @@ namespace ConsoleApplication1
             Console.WriteLine(teslaWheels);
             
             // Polymorphism and abstraction
-            var honda = new MotorCycle(2);
-            honda.GetNumberOfWheelsMCycle();
+            var honda = new MotorCycle(2)
+            {
+                Brand = "Honda"
+            };
             
+            honda.GetNumberOfWheelsMCycle();
+            Console.WriteLine("My motorcycle is a " + honda.Brand);
          
         }
     }
